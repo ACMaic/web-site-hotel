@@ -8,7 +8,7 @@
               <v-carousel height="100%" show-arrows="hover" cycle hide-delimiter-background>
                 <v-carousel-item v-for="(image, i) in roomData.property.propertyImages" :key="i">
                   <v-sheet height="700px">
-                    <img :src="image.url" :alt="'Slide ' + (i + 1)" class="d-block w-100" style="height: 100%;" />
+                    <img :src="image.url" :alt="'Slide' + (i + 1)" />
                   </v-sheet>
                 </v-carousel-item>
               </v-carousel>
@@ -19,7 +19,7 @@
               <v-carousel height="100%" show-arrows="hover">
                 <v-carousel-item v-for="(image, i) in roomData.images" :key="i">
                   <v-sheet height="100%">
-                    <img :src="image.url" :alt="'Slide ' + (i + 1)" class="d-block w-100" />
+                    <img :src="image.url" :alt="'Slide' + (i + 1)" class="d-block w-100" />
                   </v-sheet>
                 </v-carousel-item>
               </v-carousel>
@@ -41,10 +41,8 @@
     </v-main>
   </v-app>
 </template>
-
 <script setup>
 import { ref } from 'vue'
 import roomData from '../package.json'
-
 const slides = ref(['First', 'Second', 'Third', 'Fourth', 'Fifth'])
 </script>
